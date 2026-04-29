@@ -1,0 +1,217 @@
+<html>
+<head>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+header {
+background-color: #2c3e50;
+color: white;
+padding: 20px;
+text-align: center;
+}
+
+h1 {
+text-align: center;
+margin: 20px 0;
+color: #2c3e50;
+}
+
+section {
+width: 100%;
+flex: 1;
+background-color: #f0f0f0;
+display: flex;
+min-height: 500px;
+}
+
+#primeiro {
+width: 20%;
+background-color: #e8f4f8;
+padding: 20px;
+border-right: 1px solid #ccc;
+}
+
+#segundo {
+width: 60%;
+background-color: white;
+padding: 30px;
+}
+
+#terceiro {
+width: 20%;
+background-color: #e8f4f8;
+padding: 20px;
+border-left: 1px solid #ccc;
+}
+
+footer {
+background-color: #2c3e50;
+color: white;
+text-align: center;
+padding: 15px;
+margin-top: 20px;
+}
+
+.moeda {
+background-color: #3498db;
+color: white;
+padding: 10px;
+margin: 10px 0;
+border-radius: 5px;
+text-align: center;
+cursor: pointer;
+}
+
+.moeda:hover {
+background-color: #2980b9;
+}
+
+.conversor {
+background-color: #ecf0f1;
+padding: 20px;
+border-radius: 10px;
+margin-top: 20px;
+}
+
+input, select, button {
+padding: 10px;
+margin: 10px 0;
+width: 100%;
+font-size: 16px;
+}
+
+button {
+background-color: #27ae60;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #219a52;
+}
+
+.resultado {
+background-color: #d5f5e3;
+padding: 15px;
+border-radius: 5px;
+margin-top: 15px;
+text-align: center;
+font-weight: bold;
+}
+
+.dica {
+background-color: #f9e79f;
+padding: 10px;
+border-radius: 5px;
+margin: 10px 0;
+font-size: 14px;
+}
+
+h5 {
+font-size: 24px;
+color: #2c3e50;
+margin-bottom: 15px;
+}
+</style>
+</head>
+<body>
+<header>
+<h2>....</h2>
+<p>....</p>
+</header>
+
+<h1>;;;;;</h1>
+
+<section>
+<div id="primeiro">
+<h3>💡 Curiosidades</h3>
+<div class="dica">
+<strong>O que é O Caso?</strong><br>
+Jogo com foco em abordar temas de Terror Psicológico, que geralmente ficam em silencio.
+</div>
+<div class="dica">
+<strong>Quais temas são abordados?</strong><br>
+Isolamento, Exclusão social, Bullying psicológico, Falta de empatia e Crise existencial.
+</div>
+<div class="dica">
+<strong>Qual é o estilo do jogo?</strong><br>
+Jogo é estilo experiencia, cujo só é imersivo na primeira jogada. O jogo contém com conquistas, desafios e documentos que ditam a história em fragmentos, o jogo é Singleplayer, porém é possivel jogar em dupla após terminar uma vez.
+</div>
+<div class="dica">
+<strong>....</strong><br>
+....
+</div>
+</div>
+
+<div id="segundo">
+<h5>....</h5>
+<p>....</p>
+
+<p>.....</p>
+
+<h3 style="margin-top: 20px;">🔄 Tipos</h3>
+<ul style="margin-left: 20px; line-height: 1.8;">
+<li><strong>...:</strong> .....</li>
+<li><strong>...:</strong> .....</li>
+<li><strong>....:</strong>.......</li>
+</ul>
+
+
+</div>
+
+<div id="terceiro">
+<h3>Projetos dos Jogos</h3>
+<div class="moeda" onclick="alert('O Caso é um jogo de terror psicológico, que aborda temas que envolve e falta de empatia. O jogo usa como base a experiencia do próprio criador, assim, deixando a experiencia do jogo mais realista e desconfortável.')">
+O Caso
+</div>
+<div class="moeda" onclick="alert('O Caso 2 muda o tema, mas mantém a ideia central. O tema de O Caso 2, é sobre tortura psicológica, exclusão social e crise existencial. O jogo trata estes temas, e mostra como pensamentos podem desgastar emocionalmente uma pessoa.')">
+O Caso 2
+</div>
+<div class="moeda" onclick="alert('O Jogo está em desinvolvimento, mas claramente promete tratar outro tema de Terror Psicológico.')">
+O Caso 3 | Em Desinvolvimento...
+</div>
+<div class="moeda" onclick="alert('O Jogo ainda está em planejamento...')">
+O Caso 4 | Em Planejamento
+</div>
+<div class="dica" style="margin-top: 20px;">
+<strong>⚠️ Importante:</strong> O Caso ainda é um projeto de jogo, podendo conter erros que futuramente seram corrigidos.
+</div>
+</div>
+</section>
+
+<footer>
+<p>Projeto de jogo - O Caso | Em Desinvolvimento...</p>
+</footer>
+
+<script>
+function converter() {
+let reais = document.getElementById('valorReal').value;
+let select = document.getElementById('moedaDestino');
+let taxa = select.value;
+let moedaNome = select.options[select.selectedIndex].text;
+
+if (reais === "" || reais <= 0) {
+document.getElementById('resultado').innerHTML = "⚠️ Por favor, digite um valor válido!";
+document.getElementById('resultado').style.backgroundColor = "#fadbd8";
+return;
+}
+
+let convertido = reais * taxa;
+document.getElementById('resultado').innerHTML = `R$ ${reais} equivalem a ${convertido.toFixed(2)} ${moedaNome}`;
+document.getElementById('resultado').style.backgroundColor = "#d5f5e3";
+}
+</script>
+</body>
+</html>
